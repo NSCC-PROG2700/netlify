@@ -1,0 +1,196 @@
+{
+    "rows": [
+      [
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        },
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        }
+      ],
+      [
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        }
+      ],
+      [
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        }
+      ],
+      [
+        {
+          "canToggle": false,
+          "currentState": 1,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        }
+      ],
+      [
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        },
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        }
+      ],
+      [
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 2
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": true,
+          "currentState": 0,
+          "correctState": 1
+        },
+        {
+          "canToggle": false,
+          "currentState": 2,
+          "correctState": 2
+        }
+      ]
+    ]
+  }
