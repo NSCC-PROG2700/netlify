@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/NSCC-PROG2700/netlify-functions#readme",
   "dependencies": {
-    "gtfs-realtime-bindings": "0.0.5",
-    "netlify-lambda": "^1.6.3",
-    "request": "^2.88.0"
+    "gtfs-realtime-bindings": "0.0.6",
+    "netlify-lambda": "^2.0.2",
+    "request": "^2.88.2"
   }
 }
