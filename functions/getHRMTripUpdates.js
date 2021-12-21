@@ -16,8 +16,6 @@ exports.handler = (event, context, callback) => {
         if (!error && response.statusCode == 200) {
             var feed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
 
-
-
             var features = feed.entity
             if(event.queryStringParameters.route !== undefined){
                 features = features.filter(entity =>  event.queryStringParameters.route.replace(' ','').split(',').includes(entity.tripUpdate.trip.routeId))
