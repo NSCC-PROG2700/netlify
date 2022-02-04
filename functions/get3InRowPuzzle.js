@@ -8,7 +8,7 @@ exports.handler = (event, context, callback) => {
     let puzzle;
     const random = Math.floor(Math.random() * 4) + 1;
 
-    console.log(random);
+    //console.log(random);
 
     switch(random){
         case 1:{ puzzle = puzzle6x6; break; }

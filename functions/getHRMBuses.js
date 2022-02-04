@@ -2,7 +2,7 @@ var GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 var request = require('request')
 
 exports.handler = (event, context, callback) => {
-    console.log(event.queryStringParameters.route === undefined)
+    //console.log(event.queryStringParameters.route === undefined)
 
     //set up request for remote Open Halifax Data Endpoint
     var requestSettings = {
@@ -30,7 +30,7 @@ exports.handler = (event, context, callback) => {
             })
 
         } else {
-            console.log('error')
+            //console.log('error')
             callback(null, {
                 statusCode: 400,
                 headers: {

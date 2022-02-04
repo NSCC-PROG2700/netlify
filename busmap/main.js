@@ -87,7 +87,7 @@
         .then(response => response.json())
         .then(json => {
             json.features = json.features.filter(item => routes.length === 0 || routes.includes(item.properties.trip.routeId))
-            console.log(json);
+            //console.log(json);
             busesGeoJSONLayer.clearLayers();
             numbersGeoJSONLayer.clearLayers();
             busesGeoJSONLayer.addData(json);
@@ -95,7 +95,7 @@
             setTimeout(getData, 12000);
         })
         .catch(err => {
-            console.log(`Error: ${err}`)
+            //console.log(`Error: ${err}`)
             setTimeout(getData, 12000);
         })
     }
