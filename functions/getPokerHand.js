@@ -1,9 +1,10 @@
 const functions = require('./pokerHand/functions')
 
 exports.handler = (event, context, callback) => {
-    //console.log(event.path)    
-    let subPath = event.path.split('/')[2];
-    //console.log(subPath)
+    
+    //remove substring if in event.path
+    let eventPath = event.path.replace('/.netlify/functions', '')
+    let subPath = eventPath.split('/')[2];
 
     switch(subPath.toLowerCase()){
         case 'royalflush': {
