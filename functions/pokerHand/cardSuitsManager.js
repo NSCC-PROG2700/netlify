@@ -1,7 +1,7 @@
 const suits = require('./cardSuits')
 const _ = require('lodash')
 
-module.exports = {
+const manager = {
     getAllSuits: () => {
         return suits
     },
@@ -17,5 +17,26 @@ module.exports = {
             }
         }
         return shuffled[0]
+    },
+    getNonFlushSuitHand: () => {
+        let shuffled = _.shuffle(suits)
+        const result = []
+
+        //add first two different suits to ensure non-flush
+        result.push(shuffled[0])
+        result.push(shuffled[1])
+
+        //randomly add the remaining card suits
+        while(result.length < 5){
+            result.push(getRandomSuit())
+        }
+        
+        return result;
     }
 }
+
+let getAllSuits = manager.getAllSuits.bind(manager)
+let getRandomSuit = manager.getRandomSuit.bind(manager)
+let getNonFlushSuitHand = manager.getNonFlushSuitHand.bind(manager)
+
+module.exports = manager

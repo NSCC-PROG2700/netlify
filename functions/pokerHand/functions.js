@@ -116,12 +116,14 @@ module.exports = {
     },
     getStraight: (event, context, callback) => {
         const straightValues = valuesManager.getStraightValues()
+        //console.log(straightValues)
+        const suits = suitsManager.getNonFlushSuitHand()
+        //console.log(suits)
       
-        const cards = straightValues.map(value => {
-          const randomSuit = suitsManager.getRandomSuit()
-          return cardGenerator.generateCard(value, randomSuit)
+        const cards = straightValues.map((value, index) => {
+          return cardGenerator.generateCard(value, suits[index])
         })
-
+      
         payload.cards = _.shuffle(cards)
 
         callback(null, {
