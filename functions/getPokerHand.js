@@ -1,4 +1,4 @@
-const functions = require('./pokerHand/functions')
+const pokerhand = require('@macaines/pokerhand')
 
 exports.handler = (event, context, callback) => {
     
@@ -6,49 +6,53 @@ exports.handler = (event, context, callback) => {
     let eventPath = event.path.replace('/.netlify/functions', '')
     let subPath = eventPath.split('/')[2];
 
+    const response = {}
+    let responseBody;
+
     switch(subPath.toLowerCase()){
         case 'royalflush': {
-            functions.getRoyalFlush(event, context, callback)
-            break;
+            responseBody = pokerhand.generateRoyalFlush(); break;
         }
         case 'straightflush': {
-            functions.getStraightFlush(event, context, callback)
-            break;
+            responseBody = pokerhand.generateStraightFlush(); break;
         }
         case 'fourofakind': {
-            functions.getFourOfAKind(event, context, callback)
-            break;
+            responseBody = pokerhand.generateFourOfAKind(); break;
         }
         case 'fullhouse': {
-            functions.getFullHouse(event, context, callback)
-            break;
+            responseBody = pokerhand.generateFullHouse(); break;
         }
         case 'flush': {
-            functions.getFlush(event, context, callback)
-            break;
+            responseBody = pokerhand.generateFlush(); break;
         }
         case 'straight': {
-            functions.getStraight(event, context, callback)
-            break;
+            responseBody = pokerhand.generateStraight(); break;
         }
         case 'threeofakind': {
-            functions.getThreeOfAKind(event, context, callback)
-            break;
+            responseBody = pokerhand.generateThreeOfAKind(); break;
         }
         case 'twopair': {
-            functions.getTwoPair(event, context, callback)
-            break;
+            responseBody = pokerhand.generateTwoPair(); break;
         }
         case 'onepair': {
-            functions.getOnePair(event, context, callback)
-            break;
+            responseBody = pokerhand.generatePair(); break;
         }
         case 'highcard': {
-            functions.getHighCard(event, context, callback)
-            break;
+            responseBody = pokerhand.generateHighCard(); break;
         }
         default: {
-            callback(null, { statusCode: 404 })
+            response.statusCode = 404
         }
     }
+
+    if(response.statusCode !== 404){
+        response.statusCode = 200
+        response.headers = {
+            'content-type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        }
+        response.body = JSON.stringify(responseBody)
+    }
+
+    callback(null, response)
 }
