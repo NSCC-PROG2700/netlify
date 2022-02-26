@@ -40,6 +40,9 @@ exports.handler = (event, context, callback) => {
         case 'highcard': {
             responseBody = pokerhand.generateHighCard(); break;
         }
+        case 'random': {
+            responseBody = pokerhand.generateRandomHand(); break;
+        }
         default: {
             response.statusCode = 404
         }
