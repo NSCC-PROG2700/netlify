@@ -1,4 +1,5 @@
 const pokerhand = require('@macaines/pokerhand')
+const pjson = require('../package.json')
 
 exports.handler = (event, context, callback) => {
     
@@ -10,6 +11,9 @@ exports.handler = (event, context, callback) => {
     let responseBody;
 
     switch(subPath.toLowerCase()){
+        case 'version': {
+            responseBody = { version: pjson.dependencies['@macaines/pokerhand'] }
+        }
         case 'royalflush': {
             responseBody = pokerhand.generateRoyalFlush(); break;
         }
