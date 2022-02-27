@@ -12,7 +12,7 @@ exports.handler = (event, context, callback) => {
 
     switch(subPath.toLowerCase()){
         case 'version': {
-            responseBody = { version: pjson.dependencies['@macaines/pokerhand'] }
+            responseBody = { version: pjson.dependencies['@macaines/pokerhand'] }; break;
         }
         case 'royalflush': {
             responseBody = pokerhand.generateRoyalFlush(); break;
