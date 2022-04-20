@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/NSCC-PROG2700/netlify-functions#readme",
   "dependencies": {
-    "@macaines/pokerhand": "1.1.2",
+    "@macaines/pokerhand": "1.1.5",
     "gtfs-realtime-bindings": "0.0.6",
     "request": "^2.88.2"
   },
