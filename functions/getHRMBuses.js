@@ -14,10 +14,9 @@ exports.handler = (event, context, callback) => {
     //make the request
     request(requestSettings, (error, response, body) => {
         if (!error && response.statusCode == 200) {
-            var feed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body);
-            var features = feed.entity
+            var feed = GtfsRealtimeBindings.transit_realtime.FeedMessage.decode(body)
             if(event.queryStringParameters.route !== undefined){
-                features = features.filter(entity =>  event.queryStringParameters.route.replace(' ','').split(',').includes(entity.vehicle.trip.routeId))
+                feed.entity = feed.entity.filter(entity =>  event.queryStringParameters.route.replace(' ','').split(',').includes(entity.vehicle.trip.routeId))
             }
 
             callback(null, {
@@ -26,7 +25,7 @@ exports.handler = (event, context, callback) => {
                     'content-type': 'application/json',
                     'Access-Control-Allow-Origin': '*',
                 },
-                body: JSON.stringify(features)
+                body: JSON.stringify(feed)
             })
 
         } else {
