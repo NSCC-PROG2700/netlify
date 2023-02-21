@@ -1,5 +1,5 @@
 (function(){
-    var map = L.map('map').setView([44.669070, -63.613196], 14);
+    const map = L.map('map').setView([44.669070, -63.613196], 14);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
@@ -80,10 +80,7 @@
             queryString = `?route=${route}`
         }
 
-
-        //fetch(`http://localhost:9000/getHRMBusesGeoJson${queryString}`)
-	    //fetch(`https://prog2700.netlify.com/.netlify/functions/getHRMBusesGeoJson${queryString}`)
-		fetch(`https://hrmbusapi.herokuapp.com/geojson${queryString}`)
+		fetch(`https://prog2700.onrender.com/hrmbuses/geojson${queryString}`)
         .then(response => response.json())
         .then(json => {
             json.features = json.features.filter(item => routes.length === 0 || routes.includes(item.properties.trip.routeId))

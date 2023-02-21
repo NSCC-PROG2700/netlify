@@ -4,6 +4,6 @@
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  for = "/json/*"
+  for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
